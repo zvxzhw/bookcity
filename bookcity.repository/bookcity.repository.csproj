@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\bookcity.entitys\bookcity.entitys.csproj" />
+    <ProjectReference Include="..\bookcity.irepository\bookcity.irepository.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,48 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<OutputPath></OutputPath>
+		<DocumentationFile>bookcity.api.xml</DocumentationFile>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Compile Remove="LogHelper\**" />
+		<Content Remove="LogHelper\**" />
+		<EmbeddedResource Remove="LogHelper\**" />
+		<None Remove="LogHelper\**" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Compile Remove="AOP\CacheAOP.cs" />
+		<Compile Remove="AOP\RedisCacheAOP.cs" />
+		<Compile Remove="AOP\TranAOP.cs" />
+		<Compile Remove="Controllers\HomeController.cs" />
+		<Compile Remove="SwaggerHelper\CustomRouteAttribute.cs" />
+	</ItemGroup>	
+	
+	
+	<ItemGroup>
+		<PackageReference Include="Autofac.Extensions.DependencyInjection" Version="5.0.0" />
+		<PackageReference Include="Autofac.Extras.DynamicProxy" Version="4.5.0" />
+		<PackageReference Include="AutoMapper" Version="9.0.0" />
+		<PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
+		<PackageReference Include="IdentityServer4.AccessTokenValidation" Version="3.0.1" />
+		<PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.2" />
+		<PackageReference Include="MiniProfiler.AspNetCore.Mvc" Version="4.1.0" />
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="5.4.1" />
+		<PackageReference Include="Swashbuckle.AspNetCore.Filters" Version="5.1.1" />
+	</ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\bookcity.common\bookcity.common.csproj" />
+    <ProjectReference Include="..\bookcity.entitys\bookcity.entitys.csproj" />
+    <ProjectReference Include="..\bookcity.irepository\bookcity.irepository.csproj" />
+    <ProjectReference Include="..\bookcity.iservices\bookcity.iservices.csproj" />
+    <ProjectReference Include="..\bookcity.repository\bookcity.repository.csproj" />
+    <ProjectReference Include="..\bookcitys.services\bookcitys.services.csproj" />
+  </ItemGroup>
+
+
+</Project>
